@@ -1,0 +1,24 @@
+{
+	"name": "reactjs-countdown",
+	"version": "0.0.1",
+	"description": "A simple countdown timer component for React.js",
+	"main": "src/index.js",
+	"keywords": [
+    "countdown",
+    "timer",
+		"react countdown"
+	],
+	"author": "Hashemi Rafsan",
+	"license": "MIT",
+	"dependencies": {
+		"react": "~0.14.7",
+		"react-dom": "~0.14.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:hashemirafsan/reactjs-countdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hashemirafsan/reactjs-countdown/issues"
+  }
+}

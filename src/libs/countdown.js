@@ -95,7 +95,7 @@ class CountDown extends React.Component {
             })
         })
         .catch((err) => {
-            throw new Error(err)
+            //throw new Error(err)
         })
     }
 

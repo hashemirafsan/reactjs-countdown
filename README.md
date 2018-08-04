@@ -1,13 +1,14 @@
 # reactjs-countdown
+
 A simple countdown timer component for React.js.
 
 This package is inspired from the awesome [vuejs-countdown](https://github.com/getanwar/vuejs-countdown) package.
 
-![screenshot](https://raw.githubusercontent.com/hashemirafsan/reactjs-countdown/master/scr.png "React Countdown")
+![screenshot](https://raw.githubusercontent.com/hashemirafsan/reactjs-countdown/master/scr.png "React JS Countdown")
 
 ## Installation
-#### npm
 
+#### npm
 `npm i reactjs-countdown --save`
 
 

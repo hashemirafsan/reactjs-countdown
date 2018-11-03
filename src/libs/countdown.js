@@ -1,5 +1,6 @@
 import React from 'react';
-import '../style/style.css';
+import PropTypes from 'prop-types';
+import './style.css';
 
 let interval = null;
 
@@ -127,13 +128,21 @@ class CountDown extends React.Component {
         return Math.trunc(this.state.diff / 60 / 60 / 24)
     }
 
+    setDayString() {
+        return this.days() > 1 ? 'days' : 'day';
+    }
+
+    setHourString() {
+        return this.hours() > 1 ? 'hours' : 'hour';
+    }
+
     // update show days
     showDays() {
         if (this.days() > 0) {
             return (
                 <li>
-                    <p className="digit">{ this.days() | this.twoDigits(this.days()) }</p>
-                    <p className="text">{ this.days() > 1 ? 'days' : 'day' }</p>
+                    <p className="digit">{ this.twoDigits(this.days()) }</p>
+                    <p className="text">{ this.setDayString() }</p>
                 </li>
             );
         }
@@ -145,15 +154,15 @@ class CountDown extends React.Component {
                 <ul className="react-countdown">
                     { this.showDays() }
                     <li>
-                        <p className="digit">{ this.hours() | this.twoDigits(this.hours()) }</p>
-                        <p className="text">{ this.hours() > 1 ? 'hours' : 'hour' }</p>
+                        <p className="digit">{ this.twoDigits(this.hours()) }</p>
+                        <p className="text">{ this.setHourString() }</p>
                     </li>
                     <li>
-                        <p className="digit">{ this.minutes() | this.twoDigits(this.minutes()) }</p>
+                        <p className="digit">{ this.twoDigits(this.minutes()) }</p>
                         <p className="text">min</p>
                     </li>
                     <li>
-                        <p className="digit">{ this.seconds() | this.twoDigits(this.seconds()) }</p>
+                        <p className="digit">{ this.twoDigits(this.seconds()) }</p>
                         <p className="text">Sec</p>
                     </li>
                 </ul>
@@ -164,9 +173,9 @@ class CountDown extends React.Component {
 }
 
 CountDown.propTypes = {
-    deadline: React.PropTypes.string,
-    end: React.PropTypes.string,
-    stop: React.PropTypes.bool
+    deadline: PropTypes.string,
+    end: PropTypes.string,
+    stop: PropTypes.bool
 }
 
 CountDown.defaultProps = {

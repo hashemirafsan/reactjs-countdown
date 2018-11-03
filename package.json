@@ -1,25 +1,43 @@
 {
   "name": "reactjs-countdown",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "description": "A simple countdown timer component for React.js",
-  "main": "src/index.js",
+  "main": "dist/bundle.js",
   "keywords": [
     "countdown",
     "timer",
     "react countdown"
   ],
+  "scripts": {
+    "build": "webpack --mode=production"
+  },
   "author": "Hashemi Rafsan",
   "license": "MIT",
   "dependencies": {
-    "react": "~0.14.7",
-    "react-dom": "~0.14.7"
+    "babel-register": "^6.26.0",
+    "chart.js": "^2.7.2",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.4.2",
+    "react-proptypes": "^1.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.0.20",
-    "babel-loader": "^6.0.1",
-    "babel-preset-es2015": "^6.0.15",
-    "babel-preset-react": "^6.0.15",
-    "babel-preset-stage-0": "^6.0.15"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.1",
+    "webpack-cli": "^3.1.2",
+    "webpack": "^4.20.2"
   },
   "repository": {
     "type": "git",

@@ -129,11 +129,11 @@ class CountDown extends React.Component {
     }
 
     setDayString() {
-        return this.days() > 1 ? 'days' : 'day';
+        return this.days() > 1 ? 'jours' : 'jour';
     }
 
     setHourString() {
-        return this.hours() > 1 ? 'hours' : 'hour';
+        return this.hours() > 1 ? 'heures' : 'heure';
     }
 
     // update show days

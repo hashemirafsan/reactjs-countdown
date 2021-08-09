@@ -13,7 +13,8 @@ class CountDown extends React.Component {
         this.state = {
             now: Math.trunc((new Date()).getTime() / 1000),
             date: null,
-            diff: 0
+            diff: 0,
+            format: 'ENG'
         }
 
         this.seconds = this.seconds.bind(this);
@@ -59,6 +60,11 @@ class CountDown extends React.Component {
     }
 
     componentWillMount() {
+        if (this.props.format) {
+            this.setState({
+                format: this.props.format
+            })
+        }   
         this.setDateAndInterVal()
     }
 
@@ -129,11 +135,17 @@ class CountDown extends React.Component {
     }
 
     setDayString() {
-        return this.days() > 1 ? 'jours' : 'jour';
+        if (this.state.format === "FR") {
+            return this.days() > 1 ? 'jours' : 'jour';
+        }
+        return this.days() > 1 ? 'days' : 'day';
     }
 
     setHourString() {
-        return this.hours() > 1 ? 'heures' : 'heure';
+        if (this.state.format === "FR") {
+            return this.hours() > 1 ? 'heures' : 'heure';
+        }
+        return this.days() > 1 ? 'hours' : 'hour';
     }
 
     // update show days

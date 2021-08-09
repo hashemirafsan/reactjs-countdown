@@ -45,6 +45,14 @@ export default Something;
 
 You can stop the countdown timer anytime by passing `true` (Boolean) with `stop` props.
 
+You can change the language of the text to French by passing `FR` (String) with `format` props.
+
+```
+<Countdown
+    format="FR"
+    deadline="September 22, 2023"
+/>
+```
 
 ### Caution 
 
